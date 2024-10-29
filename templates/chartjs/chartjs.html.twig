@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1> Ancient remains prayer estimates </h1>
+    <div style="height: 300px;">
+        <h2>The typical rs3 skill level chart</h2>
+        {{ render_chart(expPerLevelChart) }}
+    </div>
+    
+    <div style="height: 300px; margin-top:5%;">
+        <h2>The scaling for experience per remains turn-in</h2>
+        {{ render_chart(ancientRemainsExpPerLevelChart) }}
+    </div>
+    
+    <div style="height: 300px; margin-top:5%;">
+        <h2> Uses per level and exp required from remains </h2>
+        In total to go from level 1 to 99 with Ancient remains you need {{ totalAncientRemainsRequired }} Uses
+        Meaning, roughly {{totalAncientRemainsRequired * 6}} Ancient Remains !
+        {{ render_chart(ancientRemainsTotalsChart) }}
+    </div>
+{% endblock %}
